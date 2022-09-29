@@ -1,22 +1,22 @@
 /* {
   outline: 1px solid limegreen !important;
-}*/ 
+}*/
 
 * {
   padding: 0;
   margin: 0;
 }
+
 @font-face {
   font-family: "Astrolyte";
-  src: url("utilitys/fuentes/Astrolyte/astrolyt.ttf")
-    format("truetype");
+  src: url("utilitys/fuentes/Astrolyte/astrolyt.ttf") format("truetype");
   font-style: sans-serif;
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Montserrat";
-  src: url("utilitys/fuentes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("utilitys/fuentes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
@@ -32,6 +32,7 @@ header {
   right: 0;
   z-index: 100;
   transition: all 300ms;
+
 }
 
 .container__header {
@@ -41,6 +42,7 @@ header {
   justify-content: space-between;
   /*margin-top: 3%; */
   margin-left: 5%;
+  margin-bottom: 3%;
 }
 
 header .logo {
@@ -161,9 +163,9 @@ nav ul li a {
 .containerWelcome {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   height: 100vh;
-   /*background-image: url("utilitys/img/wallpaper.jpg");*/
+  /*background-image: url("utilitys/img/wallpaper.jpg");*/
   /*background-image: url("utilitys/img/wallpaper1.jpg");*/
   background-image: url("utilitys/img/fondoinicio.jpg");
   background-size: cover;
@@ -172,7 +174,7 @@ nav ul li a {
   font-family: 'Astrolyte', sans-serif;
   /*text-shadow: 0 0 30px #fff;*/
   margin-top: 5%;
- }
+}
 
 .parrafo {
   font-size: 20px;
@@ -180,42 +182,49 @@ nav ul li a {
   text-align: justify;
   padding: 1%;
   text-indent: 2%;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-top: 2%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding: 0%;
   font-family: "Montserrat";
   background-color: rgb(59 70 184 / 30%);
 }
 
 @media only screen and (max-width: 800px) {
-  .containerLogin{
+  .containerLogin {
     margin-top: 40%;
   }
+
   .imageP {
     font-size: 10px;
   }
+
   .parrafo {
-    font-size: 20px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    font-size: 15px;
+    margin-top: 0%;
+
     margin-right: 7%;
     margin-left: 5%;
   }
+
   .container__header {
     margin-left: 10%;
   }
+
   .containerWelcome {
     margin-top: 20%;
   }
+
   .titulo {
-    font-size:15px;
+    font-size: 15px;
     margin-top: 5%;
   }
+
   .saludoUser {
     font-size: 15px;
     margin-top: 15%;
   }
-  .textarea-container{
+
+  .textarea-container {
     margin-top: 10%;
   }
 }
@@ -238,14 +247,14 @@ nav ul li a {
   border-color: #b4c5cb;
   position: relative;
 }
+
 @media only screen and (max-width: 800px) {
-    .Inputs-L
-    .button {
-      font-size: 1px;
-      margin-top: 2%;
-      padding: 0.1em 0.5em;
-    }
-    
+  .Inputs-L .button {
+    font-size: 1px;
+    margin-top: 2%;
+    padding: 0.1em 0.5em;
+  }
+
 }
 
 .button:hover {
@@ -320,7 +329,6 @@ figure {
 
 div#captioned-gallery {
   width: 85%;
-  /*overflow: hidden;*/
   text-align: center;
   align-items: center;
   margin-left: 7%;
@@ -342,7 +350,7 @@ figure.slider figure {
 }
 
 figure.slider img {
-  width: 30%;
+  width: 42%;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
@@ -354,51 +362,83 @@ figure.slider figure figcaption {
   bottom: 0;
   color: #fff;
   width: 100%;
-  font-size: 13px;
- /* padding: .5rem;*/
+  font-size: 14px;
+  /* padding: .5rem;*/
   align-content: center;
   /*text-shadow: 0 0 30px rgb(244, 244, 247);*/
   font-weight: bolder;
   -webkit-text-stroke: #000000;
 }
 
+@media screen and (max-width: 890px) {
+  figure.slider figure figcaption {
+    font-size: 11px;
+  }
+
+  figure.slider img {
+    width: 40%;
+  }
+
+  .parrafo {
+    margin: 0%;
+  }
+}
+
+
 @media only screen and (max-width: 750px) {
-   figure.slider figure figcaption {
-     font-size: 15px;
-   }
+  figure.slider figure figcaption {
+    font-size: 11px;
+  }
 
-   figure.slider img {
-     width: 35%;
-   }
 
-   #carruContainer {
-     height: 37vh;
+  .parrafo {
+    font-size: 13px;
+  }
 
-   }
-   .container__footer {
-     height: 100vh;
-   }
- }
+
+
+  figure.slider img {
+    width: 50%;
+  }
+
+  #carruContainer {
+    height: 40vh;
+
+  }
+
+  .container__footer {
+    height: 100vh;
+  }
+}
 
 
 @media only screen and (max-width: 575px) {
   figure.slider figure figcaption {
-    font-size: 10px
+    font-size: 12px
   }
-  
 
-.imageP {
-  color: azure;
-  position: absolute;
-}
+  figure.slider img {
+    width: 45%;
+  }
 
-#carruContainer {
-  width: 90vh;
-  overflow: hidden;
-  margin: 0%;
-  height: auto;
+  .imageP {
+    color: azure;
+    position: absolute;
+  }
 
-}
+  .parrafo {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: 18px;
+  }
+
+  #carruContainer {
+    width: 90vh;
+    overflow: hidden;
+    margin: 0%;
+    height: auto;
+
+  }
 
 }
 
@@ -448,7 +488,7 @@ figure.slider figure figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;  
+  margin-top: 10%;
 }
 
 .buttonL:hover {
@@ -484,7 +524,7 @@ figure.slider figure figcaption {
 
 .Inputs-L::placeholder {
   text-align: center;
-   color: #005FB3;
+  color: #005FB3;
 }
 
 .simple {
@@ -556,7 +596,7 @@ figure.slider figure figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+}
 
 /***textarea post***/
 .post-message {
@@ -570,7 +610,7 @@ figure.slider figure figcaption {
   font-family: "Astrolyte";
   height: auto;
   margin-top: 20%;
-  font-size:20px ; 
+  font-size: 20px;
 
 }
 
@@ -587,6 +627,7 @@ figure.slider figure figcaption {
   align-items: center;
   margin-top: 8%;
 }
+
 .user-icono {
   height: 100%;
   display: flex;
@@ -656,14 +697,14 @@ figure.slider figure figcaption {
   flex-direction: column;
   resize: none;
   background-color: #aae3eb;
- /*background-color:rgba(111, 196, 227, 1.5);*/
+  /*background-color:rgba(111, 196, 227, 1.5);*/
   border: solid #1673A8 0.063rem;
   border-radius: 0.813rem;
   margin: 1rem;
   width: 20rem;
   height: auto;
   padding: 1rem;
- /* color: white;*/
+  /* color: white;*/
   font-size: 20px;
   font-family: "Montserrat";
   text-align: justify;
@@ -733,3 +774,11 @@ figure.slider figure figcaption {
 .btn-delete:hover {
   cursor: pointer;
 }
+
+#carruContainer {
+  overflow: hidden;
+}
+
+/* #bluRed img {
+  filter: blur(100px)
+} */

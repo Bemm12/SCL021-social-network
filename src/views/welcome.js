@@ -53,14 +53,19 @@ export const welcome = () => {
             <figcaption>Techonolgy in the World</figcaption>
           </figure>
           <figure>
+          
           <img src="/utilitys/img/scroll.png" alt="friends">
+          
           <figcaption>Comparte contenido, agrega amigos, <br> postea y busca tips sobre tecnología</figcaption>
           <!--p class="imageP">Comparte contenido, agrega amigos,  postea y busca tips sobre tecnología<p-->
         </figure>			
         </figure>
        </div>
       </div>
-      <div class="parrafo">Nuestra meta es dar a conocer avances tecnologícos, programas para el uso profesional o recreativo y nuevos dispositivos para mejorar la calidad de vida y el funcionamiento de la sociedad, para que puedan compartir y conocer nuevas tecnologías de interés común.</div>
+      </div>
+      </div>
+      </div>
+      <div class="parrafo"><br>Nuestra meta es dar a conocer avances tecnologícos, programas para el uso profesional o recreativo y nuevos dispositivos para mejorar la calidad de vida y el funcionamiento de la sociedad, para que puedan compartir y conocer nuevas tecnologías de interés común.</div>
       <div class="buttonCover">        
       <button type="button" class="button"  id="Inicio" onclick="location.href='register.html';"> ¡Quiero Ingresar! </button>
        </div>

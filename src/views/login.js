@@ -41,6 +41,7 @@ export const login = () => {
 			maxlength="30"
 			/>
 			<br/>
+      <a href="#" ><h5 class="simple" >¿Olvidaste tu Contraseña?</h5></a>
 			<button class="buttonL" id="signUp"  type="submit">
 			Login</button>
 		</div>

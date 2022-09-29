@@ -131,12 +131,12 @@ export const updateLikes = async (id) => {
 };
 
 // editar post
-	export const getPost = (id) => getDoc(doc(db, 'post', id));
+export const getPost = (id) => getDoc(doc(db, 'post', id));
 
- 
- //actualizar post editado
- export const updatePost = (id, newFields) =>
- updateDoc(doc(db, "post", id), newFields);
+
+//actualizar post editado
+export const updatePost = (id, newFields) =>
+  updateDoc(doc(db, "post", id), newFields);
 
 // export async function editPosts(id, input) {
 //   const postEdit = doc(db, 'Post', id);
@@ -144,14 +144,14 @@ export const updateLikes = async (id) => {
 //     description: input,
 //   });
 // }
-  /*export const updatePost = async (idPost) => {
-    //doc(refDB, "coleccion", "idDoc")
-    const postRef = doc(db, "post", idPost);
+/*export const updatePost = async (idPost) => {
+  //doc(refDB, "coleccion", "idDoc")
+  const postRef = doc(db, "post", idPost);
 // Set the "capital" field of the city 'DC'
-     await updateDoc(postRef, {
-      postMessage: "textoModificado"
-     });
-    }*/
+   await updateDoc(postRef, {
+    postMessage: "textoModificado"
+   });
+  }*/
 
 //Cierre de sesión
 export const signOutUser = () => {
@@ -363,3 +363,11 @@ export function facebookLogin(facebookL) {
       // ...
     });
 }
+// const editingPost = updateDoc;
+// export async function updatePost(id, input) {
+//   const postEdit = doc(db, 'Post', id, editingPost);
+//   await updateDoc(postEdit, {
+//     description: input,
+//   });
+// }
+

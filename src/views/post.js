@@ -1,25 +1,25 @@
 import {
-    auth,
-    printPost,
-    deletePost,
-    updateLikes,
-    getPost,
-    updatePost,
-    addDataPost,
-  
-    } from '../lib/firebase.js';
+  auth,
+  printPost,
+  deletePost,
+  updateLikes,
+  getPost,
+  updatePost,
+  addDataPost,
 
-  export let editStatus = false;  
-  export let id = '';
+} from '../lib/firebase.js';
 
-  
-  const callbackPost = (post) => {
-    const containerPost = document.querySelector('#postContainer');
-    containerPost.innerHTML = '';
-    const templatesPrintPost = (element) => {
-      const postUser = document.createElement('div');
-      postUser.className = 'containerPost';
-      const templatePrintPost1 = `
+export let editStatus = false;
+export let id = '';
+
+
+const callbackPost = (post) => {
+  const containerPost = document.querySelector('#postContainer');
+  containerPost.innerHTML = '';
+  const templatesPrintPost = (element) => {
+    const postUser = document.createElement('div');
+    postUser.className = 'containerPost';
+    const templatePrintPost1 = `
         <section class="container-print-post" id="containerPrintPost">
           <div class="user-names">${element.userName}</div>
           <div id="${element.id}">
@@ -37,7 +37,7 @@ import {
           </div>
         </section>
       `;
-    
+
 
     let templatePrintPost2 = '';
     if (element.userId === auth.currentUser.uid) {
@@ -99,11 +99,11 @@ import {
   buttonEdit.forEach((item) => {
     item.addEventListener("click", async (e) => {
       try {
-        const doc = await getPost (item.value);
+        const doc = await getPost(item.value);
         console.log(item.value);
         const post = doc.data();
         console.log(doc.data());
-        document.getElementById("postMessage").value=post.userPost;
+        document.getElementById("postMessage").value = post.userPost;
 
         editStatus = true;
         id = doc.id;
@@ -115,34 +115,34 @@ import {
     });
   });
 
- document.addEventListener("submit", async (e) => {
-e.preventDefault();
-const editPost= document.getElementById("postMessage").value=post.userPost;
-try {
-  if (!editStatus) {
-    await addDataPost(postMessage.value);
-  } else {
-    await updatePost(id, {
-      postMessage:postMessage.value ,
-    });
+  document.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const editPost = document.getElementById("postMessage").value = post.userPost;
+    try {
+      if (!editStatus) {
+        await addDataPost(postMessage.value);
+      } else {
+        await updatePost(id, {
+          postMessage: postMessage.value,
+        });
 
-    editStatus = false;
-    id = "";
-    document.getElementById("postBtn").innerText = "Save";
-  }
+        editStatus = false;
+        id = "";
+        document.getElementById("postBtn").innerText = "Save";
+      }
 
-  postMessage.reset();
-  } catch (error) {
-  console.log(error);
-}
-});
+      postMessage.reset();
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
 
 
-    return containerPost;
-  };
-  
-  export const postView = () => {
-    printPost('post', callbackPost);
-  };
-  
+  return containerPost;
+};
+
+export const postView = () => {
+  printPost('post', callbackPost);
+};
+
